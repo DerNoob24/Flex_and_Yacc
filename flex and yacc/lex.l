@@ -11,8 +11,6 @@ int         {return INTEGER;}
 
  /*Operators*/
 =           {return ASSIGNMENT;}
-\<          {return RIGHT_GREATER;}
-\>          {return LEFT_GREATER;}
 
  /*Other stuff*/
 [0-9]+      {yylval = atoi(yytext);return NUMBER;}

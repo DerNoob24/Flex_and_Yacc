@@ -7,8 +7,6 @@
 %token INTEGER
 
 %token ASSIGNMENT
-%token RIGHT_GREATER
-%token LEFT_GREATER
 
 %token NUMBER
 %token LINE_END
