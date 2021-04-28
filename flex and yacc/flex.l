@@ -14,7 +14,8 @@ int         {return INTEGER;}
 
  /*Other stuff*/
 [0-9]+      {yylval = atoi(yytext);return NUMBER;}
--|\+|\*|;|\n|\r\n   {rows++;return *yytext;}
+-|\+|\*|\/|;|\n|\r\n   {rows++;return *yytext;}
+[ \t]	    ; //skip whitespaces
 
 
  /*Braces*/
