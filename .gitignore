@@ -1,10 +1,10 @@
 # test directory
-'test lex/*.yy.c'
-'test lex/*.exe'
-'test lex/*.l.bak'
+test lex/*.yy.c
+test lex/*.exe
+test lex/*.l.bak
 
 # flex and yacc
-'flex and yacc/*.yy.c'
-'flex and yacc/*.tab.c'
-'flex and yacc/*.tab.h'
-'flex and yacc/*.exe'
+flex and yacc/*.yy.c
+flex and yacc/*.tab.c
+flex and yacc/*.tab.h
+flex and yacc/*.exe
