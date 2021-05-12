@@ -6,19 +6,27 @@
 %}
 
 %%
- /*Keywords*/
-int         {return INTEGER;}
 
- /*Operators*/
+int         {return INTEGER;}
+str	    {return STRING;}
+
+if	    {return IF;}
+else	    {return ELSE;}
+while	    {return WHILE;}
+for	    {return FOR;}
+\|\|	    {return OR;}
+&&	    {return AND;}
+
+
 =           {return ASSIGNMENT;}
 
- /*Other stuff*/
+[a-z]+      {yylval = atoi(yytext);return LOWER_CASE;}
+[A-Z]+      {yylval = atoi(yytext);return UPPER_CASE;}
 [0-9]+      {yylval = atoi(yytext);return NUMBER;}
--|\+|\*|\/|;|\n|\r\n   {rows++;return *yytext;}
+-|\+|\*|\/|;|\n		{rows++;return *yytext;}
 [ \t]	    ; //skip whitespaces
 
 
- /*Braces*/
 \(          {return ROUND_START;}
 \)          {return ROUND_END;}
 
