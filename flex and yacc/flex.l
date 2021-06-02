@@ -1,39 +1,38 @@
 %{
     #include "y.tab.h"
     #include <stdlib.h>
-    int rows = 0;
+    int	rows = 0;
     void yyerror(char *);
 %}
 
 %%
 
-int         {return INTEGER;}
-str	    {return STRING;}
+int		{return INTEGER;}
+str		{return STRING;}
 
-if	    {return IF;}
-else	    {return ELSE;}
-while	    {return WHILE;}
-for	    {return FOR;}
-\|\|	    {return OR;}
-&&	    {return AND;}
+if		{return IF;}
+else		{return ELSE;}
+while		{return WHILE;}
+for		{return FOR;}
+\|\|		{return OR;}
+&&		{return AND;}
 
 
-=           {return ASSIGNMENT;}
+=		{return AS;}
 
-[a-z]+      {yylval = atoi(yytext);return LOWER_CASE;}
-[A-Z]+      {yylval = atoi(yytext);return UPPER_CASE;}
-[0-9]+      {yylval = atoi(yytext);return NUMBER;}
+[a-z]+		{yylval = atoi(yytext);printf("letter");return LOWER_CASE;}
+[A-Z]+		{yylval = atoi(yytext);return UPPER_CASE;}
+[0-9]+		{yylval = atoi(yytext);return NUMBER;}
 -|\+|\*|\/|;|\n		{rows++;return *yytext;}
-[ \t]	    ; //skip whitespaces
+[ \t]		; //skip whitespaces
 
 
-\(          {return ROUND_START;}
-\)          {return ROUND_END;}
+\(		{return ROUND_START;}
+\)		{return ROUND_END;}
 
+.		{printf("Invalid Character");return	INVALID;}
 
-.           {printf("Invalid Character");return INVALID;}
+"/""*"(.|\n)*"*""/"	{printf("multiline Comment\n");}
 %%
 
-int yywrap(){
-    return 1;
-}
+int yywrap(){ return 0; }

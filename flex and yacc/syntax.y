@@ -16,7 +16,7 @@
 %token OR
 %token AND
 
-%token ASSIGNMENT
+%token AS
 
 %token LOWER_CASE
 %token UPPER_CASE
