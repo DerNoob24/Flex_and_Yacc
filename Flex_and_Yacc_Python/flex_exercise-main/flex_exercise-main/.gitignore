@@ -1,0 +1,14 @@
+**.*.c
+**.out
+**.txt
+build/
+CMake*
+!CMakeLists.txt
+cmake*
+[m|M]akefile
+Compiler*
+.idea
+Testing
+__pycache__
+parser.out
+parsetab.py
