@@ -8,6 +8,8 @@ t_PLUS = r'\+'
 t_ASSIGNMENT = r'='
 t_MINUS = r'-'
 t_MULTIPLICATION = r'\*'
+t_DIVISION = r'\/'
+t_MODULO = r'%'
 
 t_LEFT_GREATER = r'\>'
 t_RIGHT_GREATER = r'\<'
@@ -23,8 +25,7 @@ t_QUOTED_CHARS = r'(\"[^\"]+\")|(\'[^\']+\')'
 # Ignored Characters
 t_ignore = ' \t'
 t_ignore_COMMENT = r'\#.*'
-
-# Token with a function
+t_SEMICOLON = ';'
 
 
 def t_NUMBER(t):

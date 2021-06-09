@@ -46,3 +46,26 @@ def p_if_else_statement(p):
         p[0] = p[6]
     else:
         p[0] = p[10]
+
+
+# FOR STATEMENT
+
+def p_for_loop(p):
+    'expression : FOR ROUND_START CHARS IN NUMBER ROUND_END CURLY_START expression CURLY_END'
+    for p[3] in range(p[5]):
+        p[0] = p[8]
+
+
+def p_for_else_loop(p):
+    'expression : FOR ROUND_START CHARS IN NUMBER ROUND_END CURLY_START expression CURLY_END ELSE CURLY_START expression CURLY_END'
+    for p[3] in range(p[5]):
+        p[0] = p[8]
+    else:
+        p[0] = p[12]
+
+
+# WHILE STATEMENT
+def p_while_loop(p):
+    'expression : WHILE ROUND_START condition ROUND_END CURLY_START expression CURLY_END'
+    while p[3]:
+        p[6]

@@ -1,4 +1,4 @@
-from Flex_and_Yacc_Python.syntax.rules.saved_variables import saved_variables
+from syntax.rules.saved_variables import saved_variables
 
 
 def p_variable_int(p):
@@ -48,6 +48,12 @@ def p_variable_reassign_bool(p):
         wrong_reassignment_error(p)
     saved_variables.update({p[1]: p[3] == "true"})
     print(saved_variables)
+
+
+# VAR LIST
+def p_var_list(p):
+    'expression : VARS'
+    print("\n" + str(saved_variables))
 
 
 def wrong_assignment_error(p):

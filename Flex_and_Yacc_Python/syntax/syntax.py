@@ -1,9 +1,9 @@
 import ply.yacc as yacc
-from Flex_and_Yacc_Python.tokens.tokens import tokens
-from Flex_and_Yacc_Python.syntax.rules.expressions import *
-from Flex_and_Yacc_Python.syntax.rules.terms import *
-from Flex_and_Yacc_Python.syntax.rules.variables import *
-from Flex_and_Yacc_Python.syntax.rules.conditions import *
+from tokens.tokens import tokens
+from syntax.rules.expressions import *
+from syntax.rules.terms import *
+from syntax.rules.variables import *
+from syntax.rules.conditions import *
 
 # Error handling
 

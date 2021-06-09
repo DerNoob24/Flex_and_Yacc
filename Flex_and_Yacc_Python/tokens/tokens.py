@@ -1,7 +1,9 @@
 reserved = {
     'int': 'INTEGER',
+    'float': 'FLOAT',
     'string': 'STRING',
     'bool': 'BOOLEAN',
+    'print': 'PRINT',
     'if': 'IF',
     'else': 'ELSE',
     'for': 'FOR',
@@ -9,7 +11,9 @@ reserved = {
     'true': 'TRUE',
     'false': 'FALSE',
     '==': 'EQUAL',
-    '!=': 'NOT_EQUAL'
+    '!=': 'NOT_EQUAL',
+    'in': 'IN',
+    'vars': 'VARS'
 }
 
 tokens = [
@@ -18,6 +22,8 @@ tokens = [
     'ASSIGNMENT',
     'PLUS',
     'MULTIPLICATION',
+    'DIVISION',
+    'MODULO',
     'MINUS',
     'INVERSE',
     'RIGHT_GREATER',
@@ -29,5 +35,6 @@ tokens = [
     'ROUND_END',
     'CURLY_START',
     'CURLY_END',
-    'COMMENT'
+    'COMMENT',
+    'SEMICOLON'
 ] + list(reserved.values())

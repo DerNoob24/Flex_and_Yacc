@@ -6,6 +6,16 @@ def p_term_multiplication(p):
     p[0] = p[1] * p[3]
 
 
+def p_term_division(p):
+    'term : term DIVISION term'
+    p[0] = p[1] / p[3]
+
+
+def p_term_modulo(p):
+    'term : term MODULO term'
+    p[0] = p[1] % p[3]
+
+
 def p_term_expression(p):
     'term : ROUND_START expression ROUND_END MULTIPLICATION term'
     p[0] = (p[2]) * p[5]
