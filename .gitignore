@@ -10,5 +10,3 @@ flex and yacc/*.tab.h
 flex and yacc/*.exe
 flex and yacc/*.l.bak
 flex and yacc/*.y.bak
-
-Flex_and_Yacc_Python/*.zip

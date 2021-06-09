@@ -20,29 +20,35 @@ t_CURLY_START = r'\{'
 t_CURLY_END = r'\}'
 
 t_QUOTED_CHARS = r'(\"[^\"]+\")|(\'[^\']+\')'
-#Ignored Characters
+# Ignored Characters
 t_ignore = ' \t'
 t_ignore_COMMENT = r'\#.*'
 
-#Token with a function
+# Token with a function
+
+
 def t_NUMBER(t):
     r'\d+'
     t.value = int(t.value)
     return t
 
+
 def t_CHARS(t):
     r'[A-Za-z]+'
-    t.type = reserved.get(t.value,'CHARS')
+    t.type = reserved.get(t.value, 'CHARS')
     return t
+
 
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
 
 
-#Error handling
+# Error handling
 def t_error(t):
-    print("Illegal character " + t.value[0] + " on line " + str(t.lexer.lineno))
+    print("Illegal character " +
+          t.value[0] + " on line " + str(t.lexer.lineno))
     t.lexer.skip(1)
+
 
 lexer = lex.lex()
