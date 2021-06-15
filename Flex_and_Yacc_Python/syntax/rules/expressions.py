@@ -39,11 +39,6 @@ def p_expression_variable(p):
     p[0] = p[1]
 
 
-def p_expression_int(p):
-    'expression : INTEGER'
-    print("I am a int")
-
-
 # IF ELSE STATEMENT
 
 def p_if_statement(p):
