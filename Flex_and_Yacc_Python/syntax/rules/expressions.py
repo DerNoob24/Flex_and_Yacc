@@ -12,6 +12,18 @@ def p_expression_minus(p):
         p[0] = -1*p[2]
 
 
+# funktioniert noch nicht
+
+def p_exprossion_increase(p):
+    'expression : expression INC'
+    p[0] = p[1] + 1
+
+
+def p_expression_decrease(p):
+    'expression : expression DEC'
+    p[0] = p[1] - 1
+
+
 def p_expression_braces(p):
     'expression : ROUND_START expression ROUND_END'
     p[0] = (p[2])
@@ -48,18 +60,20 @@ def p_if_else_statement(p):
         p[0] = p[10]
 
 
-# FOR STATEMENT
+# FOR STATEMENT geht zwar mehrfach durch macht aber p8 nur einmal und kann nicht mit der laufvariable arbeiten
 
 def p_for_loop(p):
     'expression : FOR ROUND_START CHARS IN NUMBER ROUND_END CURLY_START expression CURLY_END'
     for p[3] in range(p[5]):
-        p[0] = p[8]
+        print(p[3])
+        p[8]
 
 
 def p_for_else_loop(p):
     'expression : FOR ROUND_START CHARS IN NUMBER ROUND_END CURLY_START expression CURLY_END ELSE CURLY_START expression CURLY_END'
     for p[3] in range(p[5]):
-        p[0] = p[8]
+        print(p[3])
+        p[8]
     else:
         p[0] = p[12]
 

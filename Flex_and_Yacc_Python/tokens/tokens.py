@@ -13,7 +13,9 @@ reserved = {
     '==': 'EQUAL',
     '!=': 'NOT_EQUAL',
     'in': 'IN',
-    'vars': 'VARS'
+    'vars': 'VARS',
+    '++': 'INC',
+    '--': 'DEC'
 }
 
 tokens = [

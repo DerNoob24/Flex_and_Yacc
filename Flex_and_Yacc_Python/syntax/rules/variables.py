@@ -53,7 +53,7 @@ def p_variable_reassign_bool(p):
 # VAR LIST
 def p_var_list(p):
     'expression : VARS'
-    print("\n" + str(saved_variables))
+    print(saved_variables)
 
 
 def wrong_assignment_error(p):
