@@ -25,7 +25,7 @@ t_QUOTED_CHARS = r'(\"[^\"]+\")|(\'[^\']+\')'
 # Ignored Characters
 t_ignore = ' \t'
 t_ignore_COMMENT = r'\#.*'
-t_SEMICOLON = ';'
+t_ignore_SEMICOLON = ';'
 
 
 def t_NUMBER(t):
