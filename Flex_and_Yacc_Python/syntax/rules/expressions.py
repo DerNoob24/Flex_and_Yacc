@@ -12,15 +12,13 @@ def p_expression_minus(p):
         p[0] = -1*p[2]
 
 
-# funktioniert noch nicht
-
 def p_exprossion_increase(p):
-    'expression : expression INC'
+    'expression : expression PLUS PLUS'
     p[0] = p[1] + 1
 
 
 def p_expression_decrease(p):
-    'expression : expression DEC'
+    'expression : expression MINUS MINUS'
     p[0] = p[1] - 1
 
 
